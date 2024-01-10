@@ -1,3 +1,46 @@
 <center>
   <h1><b>P</b>r<b>O</b>blems <b>S</b>ol<b>V</b>bing for <b>M</b>bathematic<b>S</b> (<b>POSSUMS</b>)</h1>
 </center>
+
+<math>
+    <mfrac>
+      <mn>1</mn>
+      <mn>3</mn>
+    </mfrac>
+</math>
+
+<!--Upload a file-->
+<form action="/api" method="post" enctype="multipart/form-data">
+  <label for="file">File</label>
+  <input id="file" name="file" type="file" />
+  <button>Upload</button>
+</form>
+
+<!--Passwords -->
+<!--Aiden: redjacket, Sophie: metalmusic, Chris: chinx, Tristan: monstergirl-->
+
+<form>
+  <label for="username">Username: </label>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="password">Password: </label>
+  <input type="text" id="password" name="password"><br><br>
+  <input type="button" value="Log In" onClick=password_test(this.form)>
+</form>
+
+<script> 
+    function password_test (form) {
+        var username = form.username.value;
+        var password = form.password.value;
+
+        var dict = new Object();
+        dict["aiden"] = "redjacket";
+        dict["chris"] = "chinx";
+        dict["sophie"] = "metalmusic";
+        dict["tristan"] = "monstergirl";
+        
+        if (dict[username] === password) {
+            document.write("bruh");        
+        }        
+    
+    }
+</script>
